@@ -1,4 +1,5 @@
 # SpringMVCWeb-maven
+# nhớ tạo branch mới khi làm nha sản phẩm cuối sẽ merge vào main
 # link tham khảo: https://www.youtube.com/watch?v=Sankul76ebs&list=PLZusWOyEknKxUlNczNj7-ko9docmwjCKK
 # Đã có: 
 # - Trang chủ
