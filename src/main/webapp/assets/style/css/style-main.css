@@ -1,0 +1,22 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:	Mello
+Version:	1.1
+Last change:	15/07/2015 [fixed Float bug, vf]
+Assigned to:	7up theme
+Primary use:	admin 
+-------------------------------------------------------------------*/
+@import "../bootstrap/css/bootstrap.min.css";
+@import "blueimp-gallery.min.css";
+@import "bootstrap-image-gallery.css";
+@import "bootstrap-image-gallery.min.css";
+@import "font-awesome.css";
+@import "owl.carousel.css";
+@import "settings.css";
+@import "filter/vt-ajaxfilter.css";
+@import "filter/jquery-ui-1.8.23.custom.css";
+@import "menu.css";
+@import "style.css";
+@import "home-01.css";
+@import "vt-responsive.css";

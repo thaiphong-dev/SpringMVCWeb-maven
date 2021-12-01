@@ -1,0 +1,133 @@
+body, html {
+		margin: 0;
+		padding: 0;
+		font-family: Montserrat,sans-serif;
+		font-size: 16;
+	}
+
+	.card-shoe {
+		width: 15rem;
+		display: flex;
+		margin: 20px;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: column;
+		position: relative;
+	}
+	
+	.image-shoe img {
+		width: 15rem;
+		max-width: 100%;
+		margin-bottom: 10px;
+		cursor: pointer
+	}
+	
+	.image-shoe img.image-hover {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      object-fit: contain;
+      opacity: 0;
+      transition: opacity .5s;
+    }
+    .card-shoe:hover img.image-hover {
+      opacity: 1;
+    }
+	
+	.content {
+		text-decoration: none; 
+		font-size: 16px;
+		color: #303030;
+		
+		margin-bottom: 20px
+	}
+	
+	.content:hover {
+		color: #d60000
+	}
+	
+	.card-shoe span {
+		color: #d60000;
+		font-size: 18px;
+		align-self: flex-start;
+	}
+	
+	.badget {
+		font-size: 15px;
+		margin: 5px;
+		width: 3em;
+		height: 2em;
+		background-color: #66a8a6;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 25px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 100;
+	}
+	
+	.badget p {
+		color: white;
+	}
+	
+	.container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 70%
+	}
+	
+	footer {
+		background-color: #f0f0f0;
+		padding-top: 30px;
+		display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	padding-bottom: 20px;
+    	flex-direction: column;
+	}
+	
+	.footer-content {
+		width: 95%;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 20px;
+	}
+	
+	.footer-content-column {
+		display: flex;
+		flex-direction: column;
+		flex: 1.5;
+		padding: 0 2rem;
+		color: #555555;
+		font-size: 13px;
+		
+	}
+	
+	.footer-content-column h4 {
+		color: #222222;
+		font-size: 17px;
+	}
+	
+	.footer-content-column p {
+		margin: 0;
+		line-height: 1.8;
+	}
+	
+	.footer-content-column a {
+		margin-bottom: 20px;
+		cursor: default;
+	}
+	
+	.footer-content-column a:hover {
+		color: white;
+	}
+	
+	.footer-content-column span {
+		line-height: 1.8;
+		margin-bottom: 20px;
+	}
