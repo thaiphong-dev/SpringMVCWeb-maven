@@ -17,5 +17,10 @@ public class HomeController {
 		ModelAndView mv = new ModelAndView("user/login");	
 		return mv;
 		}
+	@RequestMapping("/dang-ky")
+	public ModelAndView Register() {
+		ModelAndView mv = new ModelAndView("user/register");	
+		return mv;
+		}
 
 }
