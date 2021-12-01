@@ -13,7 +13,7 @@
 						<div class="box-main-menu">
 							<div class="main-menu">
 								<ul>
-									<li class="item1 first"><a href="home-01.html">Home</a></li>
+									<li class="item1 first"><a href="trang-chu">Trang chủ</a></li>
 									<li class="item2 megamenu-parent"><a href="grid.html">Tablets</a>
 									<div class="vt_megamenu_content">
 									<div class="mega-menu-01">
@@ -387,12 +387,12 @@
 							<li><a class="top-link-myaccount" href="#">My Account</a></li>
 							<li><a class="top-link-wishlist" href="#">My Wishlist</a></li>
 							<li><a class="top-link-checkout" href="#">Checkout</a></li>
-							<li><a class="top-link-login" href="#">Log In</a></li>
+							<li><a class="top-link-login" href="dang-nhap">Log In</a></li>
 						</ul>
 						<ul class="right">
 							<li class="language"><a href="#" class="selected"><img src="<c:url value='/assets/images/flags/flag-french.jpg' />" alt=""/>French</a>
 									<ul>
-										<li><a href="home-01.html"><img src="<c:url value='/assets/images/flags/flag-default.jpg' />" alt=""/>English</a></li>
+										<li><a href="trang-chu"><img src="<c:url value='/assets/images/flags/flag-default.jpg' />" alt=""/>English</a></li>
 										<li><a href="home-02.html"><img src="<c:url value='/assets/images/images/flags/flag-french.jpg' />" alt=""/>French</a></li>
 									</ul>
 							</li>

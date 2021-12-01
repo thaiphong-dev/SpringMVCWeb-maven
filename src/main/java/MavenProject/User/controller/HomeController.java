@@ -12,4 +12,10 @@ public class HomeController {
 		ModelAndView mv = new ModelAndView("user/index");	
 		return mv;
 		}
+	@RequestMapping("/dang-nhap")
+	public ModelAndView Login() {
+		ModelAndView mv = new ModelAndView("user/login");	
+		return mv;
+		}
+
 }
