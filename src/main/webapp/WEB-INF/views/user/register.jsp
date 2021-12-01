@@ -2,17 +2,18 @@
 	pageEncoding="UTF-8"%>
 
 <body>
+<div id="box-content">
 <form class="form-horizontal" action='' method="POST">
   <fieldset>
     <div id="legend">
-      <legend class="">Register</legend>
+      <legend class="">Đăng ký</legend>
     </div>
     <div class="control-group">
       <!-- Username -->
-      <label class="control-label"  for="username">Username</label>
+      <label class="control-label"  for="username">Tài khoản</label>
       <div class="controls">
         <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
-        <p class="help-block">Username can contain any letters or numbers, without spaces</p>
+        <p class="help-block">Tài khoản không được chứa khoảng trắng</p>
       </div>
     </div>
  
@@ -21,35 +22,36 @@
       <label class="control-label" for="email">E-mail</label>
       <div class="controls">
         <input type="text" id="email" name="email" placeholder="" class="input-xlarge">
-        <p class="help-block">Please provide your E-mail</p>
+        <p class="help-block">Vui lòng nhập đúng email</p>
       </div>
     </div>
  
     <div class="control-group">
       <!-- Password-->
-      <label class="control-label" for="password">Password</label>
+      <label class="control-label" for="password">Mật khẩu</label>
       <div class="controls">
         <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
-        <p class="help-block">Password should be at least 4 characters</p>
+        <p class="help-block">Mật khẩu phải có ít nhất 8 ký tự</p>
       </div>
     </div>
  
     <div class="control-group">
       <!-- Password -->
-      <label class="control-label"  for="password_confirm">Password (Confirm)</label>
+      <label class="control-label"  for="password_confirm">Xác nhận mật khẩu</label>
       <div class="controls">
         <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="input-xlarge">
-        <p class="help-block">Please confirm password</p>
+        <p class="help-block">Vui lòng xác nhận mật khẩu</p>
       </div>
     </div>
  
     <div class="control-group">
       <!-- Button -->
       <div class="controls">
-        <button class="btn btn-success">Register</button>
+        <button class="btn btn-success">Đăng ký</button>
       </div>
     </div>
   </fieldset>
 </form>
+</div>
 </body>
 </html>

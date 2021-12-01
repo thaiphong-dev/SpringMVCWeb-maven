@@ -21,7 +21,9 @@
 	<%@include file="/WEB-INF/views/layouts/user/header.jsp"%>
 	<!--end header-->
 	<!--begin content-->
+	<div class="container">
 	<decorator:body />
+	</div>
 	<!--end content-->
 	<!--begin footer-->
 	<%@include file="/WEB-INF/views/layouts/user/footer.jsp"%>
