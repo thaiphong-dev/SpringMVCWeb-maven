@@ -15,4 +15,5 @@ public class UserController {
 		ModelAndView mv = new ModelAndView("user/register");	
 		return mv;
 		}
+	
 }

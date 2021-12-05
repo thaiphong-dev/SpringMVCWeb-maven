@@ -29,4 +29,9 @@ public class HomeController {
 		ModelAndView mv = new ModelAndView("user/register");	
 		return mv;
 		}
+	@RequestMapping("/danh-sach")
+	public ModelAndView ListProduct() {
+		ModelAndView mv = new ModelAndView("user/list");	
+		return mv;
+		}
 }
