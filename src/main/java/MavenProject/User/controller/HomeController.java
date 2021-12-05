@@ -29,9 +29,29 @@ public class HomeController {
 		ModelAndView mv = new ModelAndView("user/register");	
 		return mv;
 		}
-	@RequestMapping("/danh-sach")
-	public ModelAndView ListProduct() {
-		ModelAndView mv = new ModelAndView("user/list");	
+	@RequestMapping("/ban-phim-co")
+	public ModelAndView Keyboard() {
+		ModelAndView mv = new ModelAndView("user/keyboard");	
+		return mv;
+		}
+	@RequestMapping("/chuot-lot-chuot")
+	public ModelAndView Mouse() {
+		ModelAndView mv = new ModelAndView("user/mouse");	
+		return mv;
+		}
+	@RequestMapping("/tai-nghe")
+	public ModelAndView HeardPhone() {
+		ModelAndView mv = new ModelAndView("user/heardPhone");	
+		return mv;
+		}
+	@RequestMapping("/ghe-gaming")
+	public ModelAndView Chair() {
+		ModelAndView mv = new ModelAndView("user/chair");	
+		return mv;
+		}
+	@RequestMapping("/microphone")
+	public ModelAndView Microphone() {
+		ModelAndView mv = new ModelAndView("user/microphone");	
 		return mv;
 		}
 }
