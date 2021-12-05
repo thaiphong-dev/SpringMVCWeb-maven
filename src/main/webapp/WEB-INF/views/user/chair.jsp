@@ -877,7 +877,6 @@
 													&nbsp; </a></li>
 										</ol>
 									</div>
-									<!--<label class="item-pp"></label>-->
 								</div>
 								
 							</div>
