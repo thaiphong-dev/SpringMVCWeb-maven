@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <div id="box-header"> 
+<p>so luong ${ account.size() }</p>
 	<div class="header-container">
 		<div class="header"> 
 			<div class="box-header-01">
@@ -47,7 +48,7 @@
 							</div>
 							<div class="block-content">
 							   <div class="inner">
-								  <p class="block-subtitle">Sản phẩm thêm gần đây)</p>
+								  <p class="block-subtitle">Sản phẩm thêm gần đây</p>
 								  <ol id="cart-sidebar" class="mini-products-list">
 									 <li class="item">
 										<a href="#" title="Fashion Product 09" class="product-image">
@@ -73,7 +74,7 @@
 								  </div>
 								  <div class="actions">
 									 <div class="a-inner">
-										<a class="btn-mycart" href="#" title="View my cart">Xem giỏ hàng</a>
+										<a class="btn-mycart" href="gio-hang" title="View my cart">Xem giỏ hàng</a>
 										<a href="" title="Thanh toán" class="btn-checkout">Thanh toán</a>
 									 </div>
 								  </div>

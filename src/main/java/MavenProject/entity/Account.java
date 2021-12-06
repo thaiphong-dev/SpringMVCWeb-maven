@@ -4,7 +4,7 @@ public class Account {
 	private String userName;
 	private String password;
 	private boolean isActive;
-	
+	private String role;
 	
 	public Account() {
 		super();
@@ -33,5 +33,5 @@ public class Account {
 	public void setRole(String role) {
 		this.role = role;
 	}
-	private String role;
+	
 }
