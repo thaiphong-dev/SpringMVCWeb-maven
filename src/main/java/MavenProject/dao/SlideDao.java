@@ -7,15 +7,17 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import MavenProject.entity.Account;
 import MavenProject.entity.MapperAccount;
+import MavenProject.entity.MapperSlides;
+import MavenProject.entity.Slides;
 @Repository
-public class TestDao {
+public class SlideDao {
 	@Autowired
 	JdbcTemplate _jdbcTemplate;
 	
-	public List<Account> GetDataAccount() {
-		List<Account> list = new ArrayList<Account>();
-		String sql = "SELECT * FROM ACCOUNTS";
-		list = _jdbcTemplate.query(sql, new MapperAccount());
+	public List<Slides> GetDataSlide() {
+		List<Slides> list = new ArrayList<Slides>();
+		String sql = "SELECT * FROM SLIDES";
+		list = _jdbcTemplate.query(sql, new MapperSlides());
 		return list;
 	}
 }
