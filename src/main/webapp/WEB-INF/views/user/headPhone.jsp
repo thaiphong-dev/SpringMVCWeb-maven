@@ -8,7 +8,7 @@
 				<ul>
 					<li class="home"><a href="home-01.html"
 						title="Go to Home Page">Trang chủ</a> <span>|</span></li>
-					<li class="category3"><strong>Chuột - lót chuột</strong></li>
+					<li class="category3"><strong>Tai nghe - loa</strong></li>
 				</ul>
 			</div>
 		</div>
@@ -23,14 +23,14 @@
 				<div id="catalog-listing">
 
 					<ul class="products-grid row">
-						<c:forEach var="item" items="${ mouse }">
+						<c:forEach var="item" items="${ headPhone }">
 
 							<li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
 								<div class="item-wrap">
 									<div class="item-image">
 										<a class="product-image no-touch" href="#"
 											title="${ item.name }"> <img class="first_image"
-											src="<c:url value='/assets/images/mouse/${item.imageLink }' />"
+											src="<c:url value='/assets/images/headphone/${item.imageLink }' />"
 											alt="${ item.name }">
 										</a>
 										<div class="item-btn">

@@ -1,9 +1,11 @@
-package MavenProject.User.controller;
+package MavenProject.controller.User;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+@Controller
 public class UserController {
 	@RequestMapping(value ="/dang-nhap", method = RequestMethod.GET)
 	public ModelAndView Login() {
@@ -15,5 +17,4 @@ public class UserController {
 		ModelAndView mv = new ModelAndView("user/register");	
 		return mv;
 		}
-	
 }

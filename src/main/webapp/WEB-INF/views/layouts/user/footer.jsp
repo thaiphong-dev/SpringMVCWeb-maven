@@ -4,23 +4,7 @@
 	<div class="box-footer-top">		
 		<div class="container">
 			<div class="row">
-				<div class="row">    
-					<div class="box-connect col-lg-6 col-md-6 col-sm-6 col-xs-6">
-					<div class="block-title"><span>Connect with</span></div>	
-					<a href="#" class="face-book">face book</a>
-					<a href="#" class="tweeter">tweeter</a>
-					<a href="#" class="no-name">no-name</a>
-					<a href="#" class="pinseter">pinseter</a>
-					<a href="#" class="google">google+</a>
-					<a href="#" class="init">init</a>
-					</div>	
-					<div class="box-tweeter col-lg-6 col-md-6 col-sm-6 col-xs-6">
-						<div class="block-title"><span>tweeter</span></div>	
-						<div class="content">
-						Leo aliquet, dictum orci at, varius ligula. Duis aliquet pellentesque tincidunt. Vestibulum finibus ceo aliquet, dictum orci at, varius ligula. Duis aliquet 
-						</div>
-					</div>	
-				</div>
+							
 			</div>
 		</div>
 	</div>

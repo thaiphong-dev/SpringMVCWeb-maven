@@ -13,7 +13,7 @@ public class MapperAccount implements RowMapper<Account> {
 		account.setIsActive(rs.getBoolean(2));
 		account.setPassword(rs.getString(3));
 		account.setRole(rs.getString(4));
-		return null;
+		return account;
 	}
 	
 }

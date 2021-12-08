@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <div id="box-header"> 
+<p>so luong ${ account.size() }</p>
 	<div class="header-container">
 		<div class="header"> 
 			<div class="box-header-01">
