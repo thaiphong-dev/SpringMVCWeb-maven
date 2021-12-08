@@ -28,5 +28,8 @@
 	<!--begin footer-->
 	<%@include file="/WEB-INF/views/layouts/user/footer.jsp"%>
 	<!--end footer-->
+	
+	<decorator:getProperty property="page.script" />
+	
 </body>
 </html>

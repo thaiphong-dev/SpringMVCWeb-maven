@@ -45,7 +45,7 @@
 												</span>
 											</div>
 										</div>
-										<a title="Add to cart" class="btn-cart" href="#">&nbsp;</a>
+										<a title="Add to cart" class="btn-cart" href="AddCart/${ item.id }">&nbsp;</a>
 									</div>
 									<div class="pro-info">
 										<div class="pro-inner">
