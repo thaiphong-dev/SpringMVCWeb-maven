@@ -36,12 +36,11 @@
 										</a>
 										<div class="item-btn">
 											<div class="box-inner">
-												<a title="Add to wishlist" href="#" class="link-wishlist">&nbsp;</a>
-												<a title="Add to compare" href="#" class="link-compare">&nbsp;</a>
-												<span class="qview"><a href="detail.html"></a> <a
+												
+												<span class="qview"><a href="#"></a> <a
 													class="vt_quickview_handler"
 													data-original-title="Quick View" data-placement="left"
-													data-toggle="tooltip" href="#"><span>Quick View</span></a>
+													data-toggle="tooltip" href="<c:url value='${item.id}' />"><span>Quick View</span></a>
 												</span>
 											</div>
 										</div>
@@ -67,7 +66,7 @@
 						</c:forEach>
 						
 					</ul>
-					<div class="toolbar-bottom">
+					<!-- <div class="toolbar-bottom">
 						<div class="toolbar">
 							<div class="pager">
 								<div class="pages">
@@ -81,12 +80,12 @@
 												&nbsp; </a></li>
 									</ol>
 								</div>
-								<!--<label class="item-pp"></label>-->
+								<label class="item-pp"></label>
 							</div>
 
 						</div>
 
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>

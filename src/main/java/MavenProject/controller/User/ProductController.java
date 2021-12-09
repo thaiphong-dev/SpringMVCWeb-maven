@@ -2,6 +2,7 @@ package MavenProject.controller.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -16,6 +17,12 @@ public class ProductController {
 	public ModelAndView Keyboard() {
 		ModelAndView mv = new ModelAndView("user/products/keyboard");
 		mv.addObject("keyboard", productsServiceImpl.GetKeyboardProduct());
+		return mv;
+		}
+	@RequestMapping(value = { "/{id}" })
+	public ModelAndView KeyboardDetail(@PathVariable String id) {
+		ModelAndView mv = new ModelAndView("user/products/detail");
+		mv.addObject("product", productsServiceImpl.GetProductByID(id));
 		return mv;
 		}
 	@RequestMapping("/chuot-lot-chuot")
