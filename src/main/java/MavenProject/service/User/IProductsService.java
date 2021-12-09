@@ -14,4 +14,6 @@ public interface IProductsService {
 	public List<Products> GetChairProduct();
 	public List<Products> GetMicrophoneProduct();
 	public List<Products> GetHPhoneProduct();
+	
+	public Products GetProductByID(String id);
 }

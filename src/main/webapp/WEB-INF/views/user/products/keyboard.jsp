@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <div class="content">
 	<div class="breadcrumbs">
 		<div class="container">
@@ -8,7 +8,8 @@
 				<ul>
 					<li class="home"><a href="home-01.html"
 						title="Go to Home Page">Trang chủ</a> <span>|</span></li>
-					<li class="category3"><strong>Tai nghe - loa</strong></li>
+					<li class="category3"><strong>Bàn phím cơ</strong></li>
+
 				</ul>
 			</div>
 		</div>
@@ -23,24 +24,23 @@
 				<div id="catalog-listing">
 
 					<ul class="products-grid row">
-						<c:forEach var="item" items="${ headPhone }">
+						<c:forEach var="item" items="${ keyboard }">
 
 							<li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
 								<div class="item-wrap">
 									<div class="item-image">
 										<a class="product-image no-touch" href="#"
-											title="${ item.name }"> <img class="first_image"
-											src="<c:url value='/assets/images/headphone/${item.imageLink }' />"
-											alt="${ item.name }">
+											title="Ipad Air and iOS7"> <img class="first_image"
+											src="<c:url value='/assets/images/keyboards/${item.imageLink }' />"
+											alt="keyboard01	">
 										</a>
 										<div class="item-btn">
 											<div class="box-inner">
-												<a title="Add to wishlist" href="#" class="link-wishlist">&nbsp;</a>
-												<a title="Add to compare" href="#" class="link-compare">&nbsp;</a>
-												<span class="qview"><a href="detail.html"></a> <a
+												
+												<span class="qview"><a href="#"></a> <a
 													class="vt_quickview_handler"
 													data-original-title="Quick View" data-placement="left"
-													data-toggle="tooltip" href="#"><span>Quick View</span></a>
+													data-toggle="tooltip" href="<c:url value='${item.id}' />"><span>Quick View</span></a>
 												</span>
 											</div>
 										</div>
@@ -66,7 +66,7 @@
 						</c:forEach>
 						
 					</ul>
-					<div class="toolbar-bottom">
+					<!-- <div class="toolbar-bottom">
 						<div class="toolbar">
 							<div class="pager">
 								<div class="pages">
@@ -80,12 +80,12 @@
 												&nbsp; </a></li>
 									</ol>
 								</div>
-								<!--<label class="item-pp"></label>-->
+								<label class="item-pp"></label>
 							</div>
 
 						</div>
 
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>

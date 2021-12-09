@@ -22,6 +22,7 @@
 									<li class="item6"><a href="microphone">Microphone</a></li>
 									
 									<li class="item7 last"><a href="ghe-gaming">Ghế gaming</a></li>
+									<li class="item7 last"><a href="ghe-gaming">${LoginInfo.userName}</a></li>
 								</ul>
 							</div>
 								</div>

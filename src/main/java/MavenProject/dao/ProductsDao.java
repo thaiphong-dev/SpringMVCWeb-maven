@@ -1,3 +1,4 @@
+
 package MavenProject.dao;
 
 import java.util.ArrayList;
@@ -53,12 +54,17 @@ public class ProductsDao {
 		return list;
 	}
 	
-	
 	public Products FindProductByID(String id) {
 		List<Products> list = new ArrayList<Products>();
 		String sql = "select * from PRODUCTS where ID = '"+id+"'";
 		list = _jdbcTemplate.query(sql, new MapperProducts());
 		if (list.size() != 0) return list.get(0);
 		return null;
+
+	public List<Products> GetProductByID(String id) {
+		List<Products> list = new ArrayList<Products>();
+		String sql = "select * from PRODUCTS where ID='" + id +"'";
+		list = _jdbcTemplate.query(sql, new MapperProducts());		
+		return list;
 	}
 }

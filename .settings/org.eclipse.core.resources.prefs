@@ -1,2 +1,6 @@
 eclipse.preferences.version=1
+<<<<<<< HEAD
 encoding//src/main/java/MavenProject/controller/User/CartController.java=UTF-8
+=======
+encoding//src/main/java/MavenProject/controller/User/UserController.java=UTF-8
+>>>>>>> demo
