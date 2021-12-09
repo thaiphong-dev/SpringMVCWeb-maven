@@ -49,4 +49,16 @@ public class ProductsServiceImplAdmin implements IProductsServiceAdmin {
 		return productDao.GetAllProducts();
 	}
 
+	public List<Products> DeleteProduct(String id) {
+		// TODO Auto-generated method stub
+		return productDao.DeleteProduct(id);
+	}
+
+	public int UpdateProduct(Products product) {
+		// TODO Auto-generated method stub
+		return productDao.UpdateProduct(product);
+	}
+
+
+
 }

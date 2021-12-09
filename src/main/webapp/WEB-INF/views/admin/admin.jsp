@@ -39,7 +39,7 @@
               <tbody>
               
 				 <c:forEach var="item" items="${ AllUser }" varStatus="user" >
-				 <form:form class="form" action="cap-nhat/${item.id}" method="GET" modelAttribute="user">
+				 <form:form class="form" action="cap-nhat-tai-khoan/${item.id}" method="GET" modelAttribute="user">
 					<tr>
 	                  <td>${user.index}</td>
 	                  <td>
@@ -66,7 +66,7 @@
 	                  	
 	                  </td>
 	                  <td>
-	                  	<a href="<c:url value="/xoa/${ item.userName }"/>"  class="btn btn-mini btn-danger" type="button">
+	                  	<a href="<c:url value="/xoa-tai-khoan/${ item.userName }"/>"  class="btn btn-mini btn-danger" type="button">
 	                  		<span class="icon-remove"></span>
 	                  	</a>
 	                  </td>
@@ -113,16 +113,16 @@
               <tbody>
               
 				 <c:forEach var="item" items="${ allProduct }" varStatus="product">
-				  <form:form class="form" action="dang-ky" method="POST" modelAttribute="product">
+				  <form:form class="form" action="cap-nhat-san-pham/${item.id}" method="GET" modelAttribute="product">
 					<tr>
 					<td>${product.index}</td>
-	                  
-	                  <td><form:input type="text" class="span1" id="quanty-cart-${ item.id }" size="16" path="id" value="${ item.id }"/></td>
+	                  <td>${item.id}</td>
+	                  <!-- <td><form:input type="text" class="span1" id="quanty-cart-${ item.id }" size="16" path="id" value="${ item.id }"/></td> -->
 	                  <td><form:input type="text" class="span1" id="quanty-cart-${ item.name }" size="16" path="name" value="${ item.name }"/></td>
 	                  <td><form:input type="text" class="span1" id="quanty-cart-${ item.imageLink }" size="16" path="imageLink" value="${ item.imageLink }"/></td>
 	                  
 	                  <td>
-						<form:input type="number" min="0" max="1000" class="span1" style="max-width:34px" placeholder="1" id="quanty-cart-${ item.price }" size="16" path="price" value="${ item.price }"/>
+						<form:input type="number" min="0" max="10000000" class="span1" style="max-width:34px" placeholder="1" id="quanty-cart-${ item.price }" size="16" path="price" value="${ item.price }"/>
 					  </td>
 					  <td><form:input type="text" class="span1" id="quanty-cart-${ item.description }" size="16" path = "description" value="${ item.description }"/></td>
 	                   <td>
@@ -130,12 +130,12 @@
 					  </td>
 					  <td>${ item.catalogId }</td>
 	                  <td>
-	                  	<button data-id="${ item.id }" class="btn btn-mini btn-danger edit-cart" type="button"> 
+	                  	<button  class="btn btn-mini btn-danger" type="submit">
 	                  		<span class="icon-edit"></span>
 	                  	</button>
 	                  </td>
 	                  <td>
-	                  	<a href="<c:url value="/DeleteCart/${ item.id }"/>" class="btn btn-mini btn-danger" type="button">
+	                  	<a href="<c:url value="/xoa-san-pham/${ item.id }"/>" class="btn btn-mini btn-danger" type="button">
 	                  		<span class="icon-remove"></span>
 	                  	</a>
 	                  </td>

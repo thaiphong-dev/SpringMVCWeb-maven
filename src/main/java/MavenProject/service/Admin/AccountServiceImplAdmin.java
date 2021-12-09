@@ -60,13 +60,6 @@ public int UpdateUser(Users user) {
 	return userDao.UpdateUser(user);
 }
 
-public List<Users> DeleteUser(int id) {
-	// TODO Auto-generated method stub
-	return null;
-}
-
-
-
 
 
 }

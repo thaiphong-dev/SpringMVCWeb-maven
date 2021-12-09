@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import MavenProject.entity.Products;
+import MavenProject.entity.Users;
 @Service
 public interface IProductsServiceAdmin {
 	@Autowired
@@ -17,4 +18,7 @@ public interface IProductsServiceAdmin {
 	
 	public Products GetProductByID(String id);
 	public List<Products> GetAllProducts();
+	
+	public  List<Products> DeleteProduct(String id);
+	public int UpdateProduct(Products product);
 }

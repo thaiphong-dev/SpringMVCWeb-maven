@@ -15,6 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import MavenProject.dao.ProductDao;
 import MavenProject.entity.Product;
+import MavenProject.entity.Products;
 import MavenProject.entity.Users;
 import MavenProject.service.Admin.AccountServiceImplAdmin;
 import MavenProject.service.Admin.ProductsServiceImplAdmin;
@@ -68,7 +69,7 @@ public class AdminController {
 		return mv;
 		}
 	
-	@RequestMapping(value ="/xoa/{userName}", method = RequestMethod.GET)
+	@RequestMapping(value ="/xoa-tai-khoan/{userName}", method = RequestMethod.GET)
 	public String DeleteUser(HttpServletRequest request, HttpSession session, @PathVariable String userName) {
 		ModelAndView mv = new ModelAndView("admin/admin");
 		mv.addObject("AllUser", accountService.DeleteUser(userName));
@@ -82,8 +83,8 @@ public class AdminController {
 	
 
 	
-	@RequestMapping(value ="/cap-nhat/{id}", method = RequestMethod.GET)
-	public String CreateUser(HttpServletRequest request, @ModelAttribute("user") Users user) {
+	@RequestMapping(value ="/cap-nhat-tai-khoan/{id}", method = RequestMethod.GET)
+	public String UpdateUser(HttpServletRequest request, @ModelAttribute("user") Users user) {
 		ModelAndView mv = new ModelAndView("admin/admin");
 //		boolean check = accountService.CheckValidate(user);
 //		if(check ) {
@@ -96,7 +97,7 @@ public class AdminController {
 			
 				mv.setViewName("redirect:quan-tri");
 			} else {
-				mv.addObject("status", "Đăng ký tài khoản thất bại");
+				mv.addObject("status", "Chỉnh sửa thất bại");
 			}
 		
 
@@ -104,4 +105,42 @@ public class AdminController {
 	
 		 return "redirect:"+request.getHeader("Referer");
 	}
+	
+	@RequestMapping(value ="/xoa-san-pham/{id}", method = RequestMethod.GET)
+	public String DeleteProduct(HttpServletRequest request, HttpSession session, @PathVariable String id) {
+		ModelAndView mv = new ModelAndView("admin/admin");
+		mv.addObject("AllUser", accountService.GetDataUser());
+		mv.addObject("product", new Product());
+		mv.addObject("user", new Users());
+		mv.addObject("allProduct", productsService.DeleteProduct(id));
+		mv.setViewName("redirect:quan-tri");
+		mv.setViewName("admin/admin");
+		return "redirect:"+request.getHeader("Referer");
+}
+	
+	@RequestMapping(value ="/cap-nhat-san-pham/{id}", method = RequestMethod.GET)
+	public String UpdateProduct(HttpServletRequest request, @ModelAttribute("product") Products product) {
+		ModelAndView mv = new ModelAndView("admin/admin");
+//		boolean check = accountService.CheckValidate(user);
+//		if(check ) {
+			int count = productsService.UpdateProduct(product);
+			if(count > 0) {
+				mv.addObject("product", new Product());
+				mv.addObject("user", new Users());
+				mv.addObject("AllUser", accountService.GetDataUser());
+				mv.addObject("allProduct", productsService.GetAllProducts());
+			
+				mv.setViewName("redirect:quan-tri");
+			} else {
+				mv.addObject("status", "Chỉnh sửa thất bại");
+			}
+		
+
+			mv.setViewName("admin/admin");
+	
+		 return "redirect:"+request.getHeader("Referer");
+			
+	}
+	
+	
 }
