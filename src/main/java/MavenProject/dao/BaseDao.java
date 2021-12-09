@@ -6,4 +6,5 @@ import org.springframework.jdbc.core.JdbcTemplate;
 public class BaseDao {
 @Autowired
 public JdbcTemplate _JdbcTemplate;
+
 }
