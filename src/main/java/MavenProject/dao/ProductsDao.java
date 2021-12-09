@@ -60,6 +60,7 @@ public class ProductsDao {
 		list = _jdbcTemplate.query(sql, new MapperProducts());
 		if (list.size() != 0) return list.get(0);
 		return null;
+	}
 
 	public List<Products> GetProductByID(String id) {
 		List<Products> list = new ArrayList<Products>();

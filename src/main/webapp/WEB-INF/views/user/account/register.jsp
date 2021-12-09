@@ -4,13 +4,14 @@
 
 
 <body>
-<div id="box-content">
+<div style="display: flex; flex-direction: row">
+<div id="box-content" style="max-width: 50%; padding: 20px">
 <div class="mx-auto">
 		<div id="register">
 			<div class="container">
 				<div id="register-row"
 					class="row justify-content-center align-items-center">
-					<div id="register-column" class="col-md-6">
+					<div id="register-column" class="col-md-5">
 						<div id="login-box" class="col-md-12">
 							
 							<form:form class="form" action="dang-ky" method="POST" modelAttribute="user">
@@ -46,13 +47,13 @@
 			</div>
 		</div></div>
 		</div>
-		<div id="box-content">
+		<div id="box-content"  style="max-width: 50%; padding: 20px">
 		<div class="mx-auto">
 			<div id="login">
-				<div class="container">
+				<div class="container" style="max-width: 100%;">
 					<div id="login-row"
 						class="row justify-content-center align-items-center">
-						<div id="login-column" class="col-md-6">
+						<div id="login-column" class="col-md-12">
 							<div id="login-box" class="col-md-12">
 								<form:form class="form" action="dang-nhap" method="POST" modelAttribute="user">
 									<h3 class="text-center text-info">Đăng nhập</h3>
@@ -82,5 +83,7 @@
 			</div>
 		</div>
 	</div>
+</div>
+
 </body>
 

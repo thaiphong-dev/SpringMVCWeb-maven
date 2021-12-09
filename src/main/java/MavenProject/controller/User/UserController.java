@@ -32,7 +32,7 @@ public class UserController {
 	@RequestMapping(value ="/dang-ky", method = RequestMethod.POST)
 	public ModelAndView CreateUser(@ModelAttribute("user") Users user) {
 		ModelAndView mv = new ModelAndView("user/account/register");
-		boolean check = accountService.CheckValidate(user);
+//		boolean check = accountService.CheckValidate(user);		boolean check = true;
 		if(check ) {
 			int count = accountService.AddAccount(user);
 			if(count > 0) {

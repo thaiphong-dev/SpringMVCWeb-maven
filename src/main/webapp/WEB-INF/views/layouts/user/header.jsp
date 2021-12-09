@@ -4,7 +4,7 @@
 	<div class="header-container">
 		<div class="header"> 
 			<div class="box-header-01">
-				<div class="container">
+				<div class="container" style="width: 80%">
 					<div class="row">
 					<div class="logo">
 					<a href="home-01.html"><img src="<c:url value='/assets/images/logodefault.png' />" alt=""/></a>
@@ -17,12 +17,12 @@
 									<li class="item2"><a href="ban-phim-co">Bàn phím cơ</a>
 									
 									</li>
-																		<li class="item4"><a href="chuot-lot-chuot">Chuột - lót chuột </a></li>
-									<li class="item5"><a href="tai-nghe">Tai nghe - loa</a></li>
-									<li class="item6"><a href="microphone">Microphone</a></li>
+																		<li class="item3"><a href="chuot-lot-chuot">Chuột - lót chuột </a></li>
+									<li class="item4"><a href="tai-nghe">Tai nghe - loa</a></li>
+									<li class="item5"><a href="microphone">Microphone</a></li>
 									
-									<li class="item7 last"><a href="ghe-gaming">Ghế gaming</a></li>
-									<li class="item7 last"><a href="ghe-gaming">${LoginInfo.userName}</a></li>
+									<li class="item6"><a href="ghe-gaming">Ghế gaming</a></li>
+									<li class="item7 last"><a href="#" style="font-size: 12px">${LoginInfo.userName}</a></li>
 								</ul>
 							</div>
 								</div>
@@ -33,9 +33,8 @@
 					<div class="my-account">
 					<div class="content">
 						<ul class="left">
-							<li><a class="top-link-myaccount" href="#">Tài khoản của tôi</li>
-							<li><a class="top-link-wishlist" href="#">Danh mục yêu thích</a></li>
-							<li><a class="top-link-checkout" href="#">Checkout</a></li>
+							<!-- <li><a class="top-link-myaccount" href="#">Tài khoản của tôi</li>
+							<li><a class="top-link-checkout" href="#">Checkout</a></li> -->
 							<li><a class="top-link-login" href="dang-nhap">Đăng nhập</a></li>
 						</ul>
 						
@@ -43,10 +42,13 @@
 					</div>
 					<div class="box-cart">
 						<div class="cart-mini">
-							<div class="title">
-							<span class="item">0</span>
-							</div>
-							<div class="block-content">
+							<a href="gio-hang">
+								<div class="title">
+									<span class="item">${ TotalQuantyCart }</span>
+								</div>
+							</a>
+							
+							<!-- <div class="block-content">
 							   <div class="inner">
 								  <p class="block-subtitle">Sản phẩm thêm gần đây)</p>
 								  <ol id="cart-sidebar" class="mini-products-list">
@@ -79,7 +81,7 @@
 									 </div>
 								  </div>
 							   </div>
-							</div> 
+							</div>  -->
 						</div>
 					</div>
 					</div>
