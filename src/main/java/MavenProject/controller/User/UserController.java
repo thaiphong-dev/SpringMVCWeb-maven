@@ -32,17 +32,18 @@ public class UserController {
 	@RequestMapping(value ="/dang-ky", method = RequestMethod.POST)
 	public ModelAndView CreateUser(@ModelAttribute("user") Users user) {
 		ModelAndView mv = new ModelAndView("user/account/register");
-		boolean check = accountService.CheckValidate(user);
-		if(check ) {
+//		boolean check = accountService.CheckValidate(user);
+//		if(check ) {
 			int count = accountService.AddAccount(user);
 			if(count > 0) {
 				mv.addObject("status", "Đăng ký tài khoản thành công");
 			} else {
 				mv.addObject("status", "Đăng ký tài khoản thất bại");
 			}
-		}else {
-			mv.addObject("status", "Email đã tồn tại");
-		}
+		
+//	else {
+//			mv.addObject("status", "Email đã tồn tại");
+//		}
 		
 		
 		
