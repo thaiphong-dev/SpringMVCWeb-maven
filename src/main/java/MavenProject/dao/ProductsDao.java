@@ -146,10 +146,6 @@ public class ProductsDao {
 		sql.append("= ");
 		sql.append("'" + product.getId() + "'");
 		
-		
-		System.out.print(product.getName());
-		System.out.print(product.getId());
-		
 		int insert = _jdbcTemplate.update(sql.toString());
 		return insert;
 		

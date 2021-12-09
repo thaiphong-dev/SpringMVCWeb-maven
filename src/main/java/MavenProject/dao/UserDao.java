@@ -52,13 +52,7 @@ public class UserDao extends BaseDao {
 		sql.append("ADDRESS = '" + user.getAddress() + "' ");
 		sql.append("WHERE ");
 		sql.append("ID = " + user.getId() + " ");
-		
-		System.out.print(user.getId());
-		System.out.print(user.getUserName());
-		System.out.print(user.getActive());
-		System.out.print(user.getRole());
-		System.out.print(user.getFullName());
-		System.out.print(user.getAddress());
+
 		
 		int insert = _JdbcTemplate.update(sql.toString());
 		return insert;

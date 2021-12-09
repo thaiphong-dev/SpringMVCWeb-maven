@@ -22,7 +22,7 @@
 									<li class="item6"><a href="microphone">Microphone</a></li>
 									
 									<li class="item7 last"><a href="ghe-gaming">Ghế gaming</a></li>
-									<li class="item7 last"><a href="ghe-gaming">${LoginInfo.userName}</a></li>
+									
 								</ul>
 							</div>
 								</div>
@@ -35,7 +35,7 @@
 						<ul class="left">
 							<li><a class="top-link-myaccount" href="#">Tài khoản của tôi</li>
 							<li><a class="top-link-wishlist" href="#">Danh mục yêu thích</a></li>
-							<li><a class="top-link-checkout" href="#">Checkout</a></li>
+							<li><a class="top-link-checkout" href="/dang-xuat">Checkout</a></li>
 							<li><a class="top-link-login" href="dang-nhap">Đăng nhập</a></li>
 						</ul>
 						
