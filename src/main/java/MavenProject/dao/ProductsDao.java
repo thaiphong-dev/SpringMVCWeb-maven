@@ -1,3 +1,4 @@
+
 package MavenProject.dao;
 
 import java.util.ArrayList;
@@ -50,6 +51,13 @@ public class ProductsDao {
 		List<Products> list = new ArrayList<Products>();
 		String sql = "select * from PRODUCTS where CATALOG_ID='GCHAIR'";
 		list = _jdbcTemplate.query(sql, new MapperProducts());
+		return list;
+	}
+	
+	public List<Products> GetProductByID(String id) {
+		List<Products> list = new ArrayList<Products>();
+		String sql = "select * from PRODUCTS where ID='" + id +"'";
+		list = _jdbcTemplate.query(sql, new MapperProducts());		
 		return list;
 	}
 }

@@ -38,4 +38,10 @@ public class ProductsServiceImpl implements IProductsService {
 		return productDao.GetHPhoneProduct();
 	}
 
+	public Products GetProductByID(String id) {
+		List<Products> list = productDao.GetProductByID(id); 
+		return list.get(0);
+		
+	}	
+
 }

@@ -3,11 +3,8 @@ package MavenProject.dao;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import MavenProject.entity.Account;
 import MavenProject.entity.MapperProduct;
 import MavenProject.entity.Product;
 
@@ -28,14 +25,14 @@ public class ProductDao extends BaseDao {
 		sql.append(")");
 		
 		
-		int insert = _jdbcTemplate.update(sql.toString());
+		int insert = _JdbcTemplate.update(sql.toString());
 		return insert;
 	}
 	
 	public boolean checkIdProduct(String id) {
 		List<Product> list = new ArrayList<Product>();
 		String sql = "select * from PRODUCTS where ID = '"+id+"'";
-		list = _jdbcTemplate.query(sql, new MapperProduct());
+		list = _JdbcTemplate.query(sql, new MapperProduct());
 		if (list.size() != 0) return true;
 		return false;
 	}
