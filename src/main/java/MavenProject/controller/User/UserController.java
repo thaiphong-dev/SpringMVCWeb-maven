@@ -1,3 +1,4 @@
+
 package MavenProject.controller.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,14 +53,23 @@ public class UserController {
 		return mv;
 	}
 	
-	
+
+
 	@RequestMapping(value ="/dang-nhap", method = RequestMethod.POST)
 	public ModelAndView Login(HttpSession session, @ModelAttribute("user") Users user) {
 		ModelAndView mv = new ModelAndView("user/account/register");
 	boolean check = accountService.CheckAccount(user);
 		
 	if(check) {
-		mv.setViewName("redirect:trang-chu");
+		System.out.print(user.getRole());
+		
+		
+		if(user.getRole() == 1) {
+			mv.setViewName("redirect:quan-tri");
+		} else if(user.getRole() == 0) {
+			mv.setViewName("redirect:trang-chu");
+		}
+		
 		session.setAttribute("LoginInfo", user);
 	} else {
 		mv.addObject("statusLogin", "Sai email hoặc mật khẩu");
@@ -67,4 +77,10 @@ public class UserController {
 		return mv;
 	}
 	
+	@RequestMapping(value ="/dang-xuat", method = RequestMethod.POST)
+	public String logout(HttpServletRequest request,HttpSession session, @ModelAttribute("user") Users user) {
+		session.removeAttribute("LoginInfo");
+		return "redirect:"+request.getHeader("Referer");
 }
+}
+

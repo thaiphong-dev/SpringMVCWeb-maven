@@ -3,6 +3,6 @@
 		<pattern>/*</pattern>
 	</decorator>
 	<decorator name="admin" page="admin.jsp">
-		<pattern>/quan-tri/*</pattern>
+		<pattern>/*</pattern>
 	</decorator>
 </decorators>

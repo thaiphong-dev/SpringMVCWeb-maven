@@ -7,6 +7,7 @@
     
     
     <wb-module deploy-name="MavenProject-1.0">
+<<<<<<< HEAD
                                         
         
         
@@ -58,6 +59,24 @@
         
         <wb-resource deploy-path="/" source-path="/src/main/webapp/WEB-INF/views/layouts/user"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+=======
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/" source-path="/src"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp/WEB-INF"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp/WEB-INF/views"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp/WEB-INF/views/layouts"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp/WEB-INF/views/user"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp/WEB-INF/views/user/products"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp/WEB-INF/views/user/account"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp/WEB-INF/views/layouts/user"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp/WEB-INF/views/admin"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp/WEB-INF/views/layouts/admin"/>
+>>>>>>> f5f62177bac05b70f9b73b8fd04a6a2f36907903
                                                                 
         
         

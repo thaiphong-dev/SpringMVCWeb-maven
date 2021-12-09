@@ -62,10 +62,53 @@ public class ProductsDao {
 		return null;
 	}
 
-	public List<Products> GetProductByID(String id) {
+	
+	public List<Products> GetAllProducts() {
 		List<Products> list = new ArrayList<Products>();
-		String sql = "select * from PRODUCTS where ID='" + id +"'";
-		list = _jdbcTemplate.query(sql, new MapperProducts());		
+		String sql = "select * from PRODUCTS";
+		list = _jdbcTemplate.query(sql, new MapperProducts());
 		return list;
+	}
+
+	
+
+	
+	public  List<Products> DeleteProduct(String id) {
+		String sql = "delete from PRODUCTS where ID = '" + id + "'";
+		int insert = _jdbcTemplate.update(sql.toString());
+		List<Products> list = new ArrayList<Products>();
+		list = GetAllProducts();
+		return list;
+	}
+	
+	public int UpdateProduct(Products product) {
+
+		StringBuffer  sql = new StringBuffer();
+		sql.append("UPDATE ");
+		sql.append("PRODUCTS ");
+		sql.append("SET ");
+		sql.append("NAME ");
+		sql.append("= ");
+		sql.append("'" + product.getName() + "', ");
+		sql.append("IMAGE_LINK ");
+		sql.append("= ");
+		sql.append("'" + product.getImageLink() + "' , ");
+		sql.append("PRICE ");
+		sql.append("= ");
+		sql.append("" + product.getPrice() + " , ");
+		sql.append("DESCRIPTION ");
+		sql.append("= ");
+		sql.append("'" + product.getDescription() + "', ");
+		sql.append("AMOUNT ");
+		sql.append("= ");
+		sql.append("" + product.getAmount() + "");
+		sql.append("WHERE ");
+		sql.append("ID ");
+		sql.append("= ");
+		sql.append("'" + product.getId() + "'");
+		
+		int insert = _jdbcTemplate.update(sql.toString());
+		return insert;
+		
 	}
 }
