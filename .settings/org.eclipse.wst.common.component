@@ -11,8 +11,11 @@
                 
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
                 
+<<<<<<< HEAD
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
                 
+=======
+>>>>>>> 94dc0729dc98c2f5a3b9bfd8599cb9c596ccf39e
         <wb-resource deploy-path="/" source-path="/src"/>
                 
         <wb-resource deploy-path="/" source-path="/src/main/webapp/WEB-INF"/>
@@ -28,7 +31,10 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp/WEB-INF/views/user/account"/>
                 
         <wb-resource deploy-path="/" source-path="/src/main/webapp/WEB-INF/views/layouts/user"/>
+<<<<<<< HEAD
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/resources"/>
+=======
+>>>>>>> 94dc0729dc98c2f5a3b9bfd8599cb9c596ccf39e
                                         
         
         
