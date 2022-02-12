@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import MavenProject.entity.Users;
 import MavenProject.service.User.AccountServiceImpl;
@@ -61,16 +63,18 @@ public class UserController {
 	boolean check = accountService.CheckAccount(user);
 		
 	if(check) {
-		System.out.print(user.getRole());
 		
+		Users initUser = accountService.GetUserByUserName(user.getUserName());
+		System.out.print(initUser.getRole());
 		
-		if(user.getRole() == 1) {
+		if(initUser.getRole() == 0) {
 			mv.setViewName("redirect:quan-tri");
-		} else if(user.getRole() == 0) {
+		} else if(initUser.getRole() == 1) {
 			mv.setViewName("redirect:trang-chu");
 		}
 		
 		session.setAttribute("LoginInfo", user);
+		
 	} else {
 		mv.addObject("statusLogin", "Sai email hoặc mật khẩu");
 	}	

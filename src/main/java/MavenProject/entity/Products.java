@@ -57,5 +57,6 @@ public class Products {
 	public void setCatalogId(String catalogId) {
 		this.catalogId = catalogId;
 	}
+
 	
 }

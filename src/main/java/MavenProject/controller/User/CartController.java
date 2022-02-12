@@ -17,6 +17,7 @@ import MavenProject.dao.CartDao;
 import MavenProject.dao.OrderDao;
 import MavenProject.entity.Cart;
 import MavenProject.entity.Order;
+import MavenProject.entity.Users;
 
 
 
@@ -78,14 +79,17 @@ public class CartController {
 	
 	@RequestMapping(value = "/gio-hang", method = RequestMethod.POST)
 	public String checkoutOrder(HttpServletRequest request ,HttpSession session, @ModelAttribute("order") Order order) {
+		Users userName = (Users)session.getAttribute("LoginInfo");
 		HashMap<String, Cart> cartHashMap = (HashMap<String, Cart>)session.getAttribute("Cart");
+		
+		
 		
 		if (cartHashMap == null) {
 			session.setAttribute("status", "Không có sản phẩm nào trong giỏ hàng");
 			return "redirect:"+request.getHeader("Referer");
 		}
-		
-		if (orderDao.AddOrder(order) > 0) {
+		if(userName != null) {
+		if (orderDao.AddOrder(order, userName.getUserName()) > 0) {
 //			HashMap<String, Cart> cartHashMap = (HashMap<String, Cart>)session.getAttribute("Cart");
 			orderDao.AddOrderDetail(cartHashMap);
 		}
@@ -94,5 +98,10 @@ public class CartController {
 		session.removeAttribute("TotalPriceCart");
 		session.removeAttribute("status");
 		return "redirect:"+request.getHeader("Referer");
+	}
+		else {
+			session.setAttribute("status", "vui lòng đăng nhập trước khi thanh toán");
+			return "redirect:"+request.getHeader("Referer");
+		}
 	}
 }

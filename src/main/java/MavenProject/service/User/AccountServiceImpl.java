@@ -1,10 +1,13 @@
 package MavenProject.service.User;
 
+import java.util.List;
+
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import MavenProject.dao.UserDao;
+import MavenProject.entity.Products;
 import MavenProject.entity.Users;
 @Service
 public class AccountServiceImpl implements IAccountService {
@@ -41,6 +44,12 @@ public boolean CheckValidate(Users user) {
 	return false;
 	}
 	return true;
+}
+
+public Users GetUserByUserName(String userName) {
+	// TODO Auto-generated method stub
+	List<Users> list =  userDao.GetUserByUserName(userName);
+	return list.get(0);
 }
 
 }

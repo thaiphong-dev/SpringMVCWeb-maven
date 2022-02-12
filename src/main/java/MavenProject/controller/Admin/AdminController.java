@@ -14,10 +14,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import MavenProject.dao.ProductDao;
+import MavenProject.entity.Order;
 import MavenProject.entity.Product;
 import MavenProject.entity.Products;
 import MavenProject.entity.Users;
 import MavenProject.service.Admin.AccountServiceImplAdmin;
+import MavenProject.service.Admin.OrdersServiceAdminImpl;
 import MavenProject.service.Admin.ProductsServiceImplAdmin;
 import MavenProject.service.User.ProductsServiceImpl;
 import Service.ProductServiceImpl;
@@ -32,12 +34,16 @@ public class AdminController {
 
 	@Autowired
 	AccountServiceImplAdmin accountService;
+	@Autowired
+	OrdersServiceAdminImpl ordersService;
 	
 	@RequestMapping(value ="/quan-tri", method = RequestMethod.GET)
 	public ModelAndView admin() {
 		ModelAndView mv = new ModelAndView("admin/admin");
 		mv.addObject("product", new Product());
 		mv.addObject("user", new Users());
+		mv.addObject("order", new Order());
+		mv.addObject("allOrder", ordersService.GetAllProducts());
 		mv.addObject("allProduct", productsService.GetAllProducts());
 		mv.addObject("AllUser", accountService.GetDataUser());
 		return mv;
@@ -140,6 +146,55 @@ public class AdminController {
 	
 		 return "redirect:"+request.getHeader("Referer");
 			
+	}
+	
+	
+	@RequestMapping(value ="/tao-tai-khoan", method = RequestMethod.POST)
+	public String CreateUser(HttpServletRequest request, @ModelAttribute("user") Users user) {
+		ModelAndView mv = new ModelAndView("admin/admin");
+//		boolean check = accountService.CheckValidate(user);
+		boolean check = true;
+		if(check ) {
+			int count = accountService.AddAccountByAdmin(user);
+			if(count > 0) {
+				mv.addObject("status", "Đăng ký tài khoản thành công");
+			} else {
+				mv.addObject("status", "Đăng ký tài khoản thất bại");
+			}
+		}else {
+			mv.addObject("status", "Email đã tồn tại");
+		}
+		
+		
+		
+//		mv.addObject("status", true);
+		mv.setViewName("admin/admin");
+	
+		return "redirect:"+request.getHeader("Referer");
+	}
+	
+	@RequestMapping(value ="/tao-san-pham", method = RequestMethod.POST)
+	public String CreateProduct(HttpServletRequest request, @ModelAttribute("user") Products product) {
+		ModelAndView mv = new ModelAndView("admin/admin");
+//		boolean check = accountService.CheckValidate(user);
+		boolean check = true;
+		if(check ) {
+			int count = productsService.AddProductByAdmin(product);
+			if(count > 0) {
+				mv.addObject("status", "Tạo sản phẩm thành công");
+			} else {
+				mv.addObject("status", "Tạo sản phẩm thất bại");
+			}
+		}else {
+			mv.addObject("status", "");
+		}
+		
+		
+		
+//		mv.addObject("status", true);
+		mv.setViewName("admin/admin");
+	
+		return "redirect:"+request.getHeader("Referer");
 	}
 	
 	

@@ -10,6 +10,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import MavenProject.entity.Cart;
+import MavenProject.entity.MapperOrder;
 import MavenProject.entity.MapperProducts;
 import MavenProject.entity.Order;
 import MavenProject.entity.OrderDetail;
@@ -20,7 +21,7 @@ public class OrderDao {
 	@Autowired
 	JdbcTemplate _jdbcTemplate;
 	
-	public int AddOrder(Order order) {
+	public int AddOrder(Order order, String userName) {
 		StringBuffer  sql = new StringBuffer();
 		sql.append("insert into ORDERS (CUSTOMER_ADDRESS, CUSTOMER_EMAIL, CUSTOMER_NAME, CUSTOMER_PHONE, ORDER_DATE, USERNAME) VALUES ( ");
 		sql.append("'"+order.getCustomerAddress()+"', ");
@@ -28,7 +29,7 @@ public class OrderDao {
 		sql.append("'"+order.getCustomerName()+"', ");
 		sql.append("'"+order.getCustomerPhone()+"', ");
 		sql.append("GETDATE(), ");
-		sql.append("'employee1')");// thay cai nay bang username dang dang nhap
+		sql.append("'"+ userName +"')");// thay cai nay bang username dang dang nhap
 		
 		int insert = _jdbcTemplate.update(sql.toString());
 		return insert;
@@ -63,4 +64,11 @@ public class OrderDao {
 			AddOneOrderDetail(orderDetail);
 		}
 	}
+	public List<Order> GetAllProducts() {
+		List<Order> list = new ArrayList<Order>();
+		String sql = "select * from ORDERS";
+		list = _jdbcTemplate.query(sql, new MapperOrder());
+		return list;
+	}
+
 }

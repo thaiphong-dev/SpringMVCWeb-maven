@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import MavenProject.dao.ProductsDao;
 import MavenProject.entity.Products;
+import MavenProject.entity.Users;
 
 @Service
 public class ProductsServiceImplAdmin implements IProductsServiceAdmin {
@@ -57,6 +58,13 @@ public class ProductsServiceImplAdmin implements IProductsServiceAdmin {
 	public int UpdateProduct(Products product) {
 		// TODO Auto-generated method stub
 		return productDao.UpdateProduct(product);
+	}
+
+	public int AddProductByAdmin(Products product) {
+
+		
+		return productDao.AddProduct(product);
+
 	}
 
 

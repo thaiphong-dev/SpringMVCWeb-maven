@@ -21,4 +21,5 @@ public interface IProductsServiceAdmin {
 	
 	public  List<Products> DeleteProduct(String id);
 	public int UpdateProduct(Products product);
+	public int AddProductByAdmin(Products product);
 }

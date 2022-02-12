@@ -79,4 +79,11 @@ public class UserDao extends BaseDao {
 		list = _JdbcTemplate.query(sql, new MapperUsers());
 		return list;
 	}
+
+	public List<Users> GetUserByUserName(String userName) {
+		List<Users> list = new ArrayList<Users>();
+		String sql = "SELECT * FROM USERS  where USERNAME = '" + userName + "'";
+		list = _JdbcTemplate.query(sql, new MapperUsers());
+		return list;
+	}
 }

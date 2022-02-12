@@ -21,4 +21,6 @@ public interface IAccountServiceAdmin {
 	
 	public int UpdateUser(Users user);
 	
+	public int AddAccountByAdmin(Users user);
+	
 }

@@ -1,5 +1,7 @@
 package MavenProject.service.User;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import MavenProject.entity.Users;
@@ -12,4 +14,6 @@ public interface IAccountService {
 	public boolean CheckAccount(Users user);
 	
 	public boolean CheckValidate(Users user);
+	
+	public  Users GetUserByUserName(String userName);
 }

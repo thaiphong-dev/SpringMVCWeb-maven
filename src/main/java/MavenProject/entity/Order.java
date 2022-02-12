@@ -5,7 +5,34 @@ public class Order {
 	private String customerPhone;
 	private String customerEmail;
 	private String customerAddress;
+	private String orderDate;
+	private int id;
+	private String userName;
 	
+	public String getOrderDate() {
+		return orderDate;
+	}
+
+	public void setOrderDate(String orderDate) {
+		this.orderDate = orderDate;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
 	public Order() {
 		super();
 	}

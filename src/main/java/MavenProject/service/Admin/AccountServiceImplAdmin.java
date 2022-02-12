@@ -60,6 +60,13 @@ public int UpdateUser(Users user) {
 	return userDao.UpdateUser(user);
 }
 
+public int AddAccountByAdmin(Users user) {
+
+	user.setPassword(BCrypt.hashpw(user.getPassword(), BCrypt.gensalt(12)));
+	
+	return userDao.AddAccount(user);
+}
+
 
 
 }

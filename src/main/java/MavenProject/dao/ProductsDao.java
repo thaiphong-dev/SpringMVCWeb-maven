@@ -62,6 +62,12 @@ public class ProductsDao {
 		return null;
 	}
 
+	public List<Products> GetProductByID(String id) {
+		List<Products> list = new ArrayList<Products>();
+		String sql = "select * from PRODUCTS where ID='" + id +"'";
+		list = _jdbcTemplate.query(sql, new MapperProducts());		
+		return list;
+	}
 	
 	public List<Products> GetAllProducts() {
 		List<Products> list = new ArrayList<Products>();
@@ -107,6 +113,35 @@ public class ProductsDao {
 		sql.append("= ");
 		sql.append("'" + product.getId() + "'");
 		
+		int insert = _jdbcTemplate.update(sql.toString());
+		return insert;
+		
+	}
+	public int AddProduct(Products product) {
+		
+		StringBuffer sql = new StringBuffer();
+		sql.append("insert ");
+		sql.append("into productS ");
+		sql.append("( ");
+		sql.append("ID, ");
+		sql.append("NAME, ");
+		sql.append("IMAGE_LINK, ");
+		sql.append("PRICE, ");
+		sql.append("DESCRIPTION, ");
+		sql.append("AMOUNT, ");
+		sql.append("CATALOG_ID ");
+		sql.append(") ");
+		sql.append("VALUES ");
+		sql.append("( ");
+		sql.append("'" + product.getId() + "', ");
+		sql.append("'" + product.getName() + "', ");
+		sql.append("'" + product.getImageLink() + "', ");
+		sql.append("" + product.getPrice() + ", ");
+		sql.append("'" + product.getDescription() + "', ");
+		sql.append("" + product.getAmount() + "	, ");
+		sql.append("'" + product.getCatalogId() + "' ");
+		sql.append(")");
+
 		int insert = _jdbcTemplate.update(sql.toString());
 		return insert;
 		

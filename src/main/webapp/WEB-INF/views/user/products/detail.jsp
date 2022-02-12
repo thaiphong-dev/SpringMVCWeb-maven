@@ -69,7 +69,7 @@ Body Section
 												<div class="item-btn">
 													<div class="box-inner">
 
-														<a title="Add to cart" class="btn-cart" href="#">Add
+														<a title="Add to cart" class="btn-cart" href="AddCart/${ product.id }">Add
 															to Cart</a>
 													</div>
 												</div>
